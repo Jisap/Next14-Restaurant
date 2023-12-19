@@ -33,15 +33,27 @@ const Menu = () => {
   return (
     <section className="relative py-12 xl:py-24 bg-menu" id="menu">
       <div className="container mx-auto">
-        <div className="max-x-[570px] mx-auto text-center">
+        <motion.div 
+          variants={fadeIn("left", 0.3)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.2 }}  
+          className="max-w-[570px] mx-auto text-center xl:text-right"
+        >
           <h2 className="mb-3">Favorite Menu</h2>
-          <Link href="/" className="text-green">
+          <Link href="/" className="text-green flex justify-center xl:justify-end items-center mb-16">
             View all
-            <IoIosArrowRoundForward />
+            <IoIosArrowRoundForward className="text-3xl"/>
           </Link>
-        </div>
+        </motion.div>
         {/* menu grid */}
-        <div className="grid grid-cols-1 gap-[30px] md:grid-cols-3 md:gap-[15px] xl:grid-cols-4">
+        <motion.div 
+          variants={fadeIn("up", 0.4)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.2 }}   
+          className="grid grid-cols-1 gap-[30px] md:grid-cols-3 md:gap-[15px] xl:grid-cols-4"
+        >
           {menu.map((item, index) => {
             return (
               <div 
@@ -72,7 +84,7 @@ const Menu = () => {
               </div>
             )
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   )
