@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
+import Menu from '@/components/Menu'
 import StyleGuide from '@/components/StyleGuide'
 import Image from 'next/image'
 
@@ -8,6 +9,7 @@ export default function Home() {
     <main className='w-full max-w-[1440px] bg-white mx-auto overflow-hidden'>
       <Header />
       <Hero />
+      <Menu />
       {/* <StyleGuide /> */}
       <div className='h-[4000px]'></div>
     </main>
