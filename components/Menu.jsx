@@ -33,8 +33,8 @@ const Menu = () => {
   return (
     <section className="relative py-12 xl:py-24 bg-menu" id="menu">
       <div className="container mx-auto">
-        <div>
-          <h2>FAvorite Menu</h2>
+        <div className="max-x-[570px] mx-auto text-center">
+          <h2 className="mb-3">Favorite Menu</h2>
           <Link href="/" className="text-green">
             View all
             <IoIosArrowRoundForward />
@@ -48,12 +48,27 @@ const Menu = () => {
                 key={index} 
                 className="max-w-[270px] bg-white shadow-primary mx-auto xl:mx-0 group"
               >
-                <Image 
-                  src={item.img}
-                  width={270}
-                  height={270}
-                  alt="menu"
-                />
+                {/* Image */}
+                <div className="overflow-hidden">
+                  <Image 
+                    src={item.img}
+                    width={270}
+                    height={270}
+                    alt="menu"
+                    className="group-hover:scale-110 transition-all duration-300"
+                  />
+                </div>
+                {/* title & price */}
+                <div className="pt-[20px] pb-[28px] px-[30px]">
+                  <Link href="/">
+                    <h3 className="font-poppins text-black mb-[14px]">
+                      {item.title}
+                    </h3>
+                  </Link>
+                  <div className="text-xl font-poppins font-semibold text-orange">
+                    {item.price}
+                  </div>
+                </div>
               </div>
             )
           })}
