@@ -26,8 +26,8 @@ const ReservationForm = () => {
   const [date, setDate] = useState()
 
   return (
-    <form>
-      <div>
+    <form className=" flex flex-col gap-y-10">
+      <div className="grid gap-[30px]">
         <div className="grid gird-cols-1 xl:grid-cols-2 gap-[30px]">
           <div>
             <Label htmlFor="firstname">first name</Label>
@@ -65,7 +65,30 @@ const ReservationForm = () => {
               </PopoverContent>
             </Popover>
           </div>
+          {/* select */}
+          <div>
+            <Label>person</Label>
+            <Select>
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder="How many people ?" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectLabel>People</SelectLabel>
+                  <SelectItem value="1">1</SelectItem>
+                  <SelectItem value="2">2</SelectItem>
+                  <SelectItem value="3">3</SelectItem>
+                  <SelectItem value="4">4</SelectItem>
+                  <SelectItem value="5">5</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+          </div>
         </div>
+
+        <Button className="uppercase w-full xl:w-auto xl:self-end">
+          Book a table
+        </Button>
 
       </div>
     </form>
