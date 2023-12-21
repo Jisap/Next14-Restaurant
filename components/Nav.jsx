@@ -34,7 +34,7 @@ const Nav = ({ containerStyles, linkStyles }) => {
               key={index} 
               to={link.path}
               spy={true}
-              smoth={true}
+              smooth={true}
               offset={link.offset}
               duration={500}
               className={`${linkStyles}`}  
