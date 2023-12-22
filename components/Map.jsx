@@ -2,9 +2,9 @@
 
 import { fadeIn } from "@/variants"
 import { motion } from "framer-motion"
-import { Icon } from "leaflet"
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet"
 import { useMediaQuery } from "react-responsive"
+import { Icon } from "leaflet"
 
 import "leaflet/dist/leaflet.css"
 
@@ -27,11 +27,28 @@ const markers = [
     subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     image: "/map/3.png"
   },
-]
+];
+
+const customIcon = new Icon({
+  iconUrl: "/pin-solid.svg",
+  iconSize: [40, 40],
+})
 
 const Map = () => {
   return (
-    <div>Map</div>
+    <section>
+      <MapContainer 
+        center={[34.052235, -118.243683]}
+        zoom={10}
+        className="h-[900px] z-10"  
+        zoomControl={false}
+      >
+        <TileLayer 
+          attribution="&copy; <a>'https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
+          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+        />
+      </MapContainer>
+    </section>
   )
 }
 
