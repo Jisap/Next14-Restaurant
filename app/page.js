@@ -1,3 +1,4 @@
+import About from '@/components/About'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import Menu from '@/components/Menu'
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Menu />
       <Reservation />
+      <About />
       {/* <StyleGuide /> */}
       <div className='h-[4000px]'></div>
     </main>
