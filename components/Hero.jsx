@@ -9,7 +9,7 @@ import { Button } from "./ui/button"
 
 const Hero = () => {
   return (
-    <section className="bg-hero bg-no-repeat relative xl:bg-cover xl:h-[1098px] py-40 pb-32 xl:py-0">
+    <section className="bg-hero bg-no-repeat relative xl:bg-cover xl:h-[1098px] py-40 pb-32 xl:py-0" id="home">
       <div className="container mx-auto">
         {/* text & image */}
         <div className="flex items-center xl:h-[960px]">

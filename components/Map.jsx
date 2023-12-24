@@ -44,7 +44,7 @@ const Map = () => {
 
 
   return (
-    <section>
+    <section id='contact'>
       <MapContainer 
         center={[34.052235, -118.243683]}
         zoom={isMobile ? 10: 12}
@@ -64,12 +64,12 @@ const Map = () => {
               icon={customIcon}
             >
               <Popup>
-                <div>
-                  <div>
+                <div className="flex gap-x-[30px]">
+                  <div className="flex-1">
                     <h3>{marker.title}</h3>
-                    <p>{marker.subtitle}</p>
+                    <p  className="leading-snug">{marker.subtitle}</p>
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <Image 
                       src={marker.image}
                       width={130}
