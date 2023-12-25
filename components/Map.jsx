@@ -44,7 +44,15 @@ const Map = () => {
 
 
   return (
-    <section id='contact'>
+    <motion.section
+      variants={fadeIn("up", 0.2)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.4 }} 
+      id='contact'
+      className="relative xl:after:w-full xl:after:h-[240px] xl:after:bg-gradient-to-b xl:after:from-white xl:after:via-white/80
+      xl:after:to-white/20 xl:after:absolute xl:after:top-0 xl:after:z-20"
+    >
       <MapContainer 
         center={[34.052235, -118.243683]}
         zoom={isMobile ? 10: 12}
@@ -83,7 +91,7 @@ const Map = () => {
           )
         })}
       </MapContainer>
-    </section>
+    </motion.section>
   )
 }
 
