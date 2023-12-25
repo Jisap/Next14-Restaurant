@@ -27,7 +27,11 @@ const Footer = () => {
           {/* grid items */}
           <div className="flex-1 grid grid-cols-1 xl:grid-cols-3 gap-[50px] mb-8 xl:mb-16">
             {/* blog */}
-            <div>Blog</div>
+            <div>
+              <h4 className="font-semibold mb-5">
+                Blog
+              </h4>
+            </div>
             {/* item */}
             <div>item</div>
             {/* socials */}
